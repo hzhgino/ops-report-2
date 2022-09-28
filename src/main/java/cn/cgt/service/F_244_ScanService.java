@@ -46,10 +46,10 @@ public class F_244_ScanService {
         DateTime dateTime = DateUtil.parseDate(date);
         int year = dateTime.year();
         int month = dateTime.monthBaseOne();
-        String codeDate = year + "-" + month;
+        String reportDate = year + "-" + month + "-09";
         Map<String, String> templatesParams = new HashMap<>();
-        templatesParams.put("{编号}", "SJW-SCAN-" + codeDate);
-        templatesParams.put("{日期}", date);
+        templatesParams.put("{编号}", "SJW-SCAN-" + reportDate);
+        templatesParams.put("{日期}", reportDate);
         templatesParams.put("{病毒库}", version);
         templatesParams.put("{程序}", scanVersion);
 

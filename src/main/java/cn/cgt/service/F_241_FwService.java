@@ -41,10 +41,10 @@ public class F_241_FwService {
         DateTime dateTime = DateUtil.parseDate(date);
         int year = dateTime.year();
         int month = dateTime.monthBaseOne();
-        String codeDate = year + "-" + month;
         Map<String, String> templatesParams = new HashMap<>();
-        templatesParams.put("{编号}", "SJW-FW-" + codeDate);
-        templatesParams.put("{日期}", date);
+        String reportDate = year + "-" + month + "-09";
+        templatesParams.put("{编号}", "SJW-FW-" + reportDate);
+        templatesParams.put("{日期}", reportDate);
 
         Set<Map.Entry<String, String>> entries = templatesParams.entrySet();
         for (Map.Entry<String, String> entry : entries) {

@@ -32,8 +32,7 @@ public class F_242_MiddleService {
      * @param date        日期
      */
     public void report(String date) {
-        //
-        String templatePath = reportConfiguration.getTemplatePath() + "项目运维资料/三、系统维护/过程资料/安全管理/服务器中间件巡查记表记录/2.4.2、安全管理-服务器中间件况巡查表.docx";
+        String templatePath = reportConfiguration.getTemplatePath() + "项目运维资料/三、系统维护/过程资料/安全管理/服务器中间件巡查表记录/2.4.2、安全管理-服务器中间件况巡查表.docx";
         //加载文档
         Document doc = new Document();
         doc.loadFromFile(templatePath);
@@ -41,10 +40,10 @@ public class F_242_MiddleService {
         DateTime dateTime = DateUtil.parseDate(date);
         int year = dateTime.year();
         int month = dateTime.monthBaseOne();
-        String codeDate = year + "-" + month;
         Map<String, String> templatesParams = new HashMap<>();
-        templatesParams.put("{编号}", "SJW-MD-" + codeDate);
-        templatesParams.put("{日期}", date);
+        String reportDate = year + "-" + month + "-09";
+        templatesParams.put("{编号}", "SJW-MD-" +reportDate);
+        templatesParams.put("{日期}", reportDate);
 
         Set<Map.Entry<String, String>> entries = templatesParams.entrySet();
         for (Map.Entry<String, String> entry : entries) {

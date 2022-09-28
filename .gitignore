@@ -41,3 +41,4 @@ fabric.properties
 .idea/
 ./.idea/
 ./target/
+.DS_Store
