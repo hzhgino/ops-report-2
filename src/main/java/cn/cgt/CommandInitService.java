@@ -31,20 +31,27 @@ public class CommandInitService implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        String date = "2022-07-01";
-        String version = "26598";
-        String scanVersion = "0.100.0";
+        //报告日期
+        String date = "2023-09-01";
+        String version = " 2023-06-28  "; //病毒库
+        String scanVersion = "8.0.5.5013";  //扫描程序
+
+//        System.out.println("数据更新报告： \\192.168.11.5\开发项目文档\\2023年\\市纪委监委党风廉政建设大数据平台运维（2023年）项目\\项目运维资料\\一、数据整理入库\\过程资料\\数据入库");
+        System.out.println("数据更新报告: \\\\192.168.11.5\\开发项目文档\\2023年\\市纪委监委党风廉政建设大数据平台运维（2023年）项目\\项目运维资料\\一、数据整理入库\\过程资料\\数据入库");
 
         //日常巡检报告
         f_33_dailyOpsService.report(date);
         //平台运行情况汇总
         f_211_operationService.report(date);
-        //核心平台升级明细情况表
+        //  \\192.168.11.5\开发项目文档\2022年\2022年佛山市党风廉政建设大数据平台运维项目\项目运维资料\一、数据整理入库\过程资料/数据入库
+        //  /核心平台升级明细情况表 /Volumes/开发项目文档/2022年/2022年佛山市党风廉政建设大数据平台运维项目/项目运维资料/一、数据整理入库/过程资料/数据入库
         f_212_coreCheckService.report(date);
         //平台故障及解决方式汇总
         f_213_faultReportService.report(date);
+
         //服务器防火墙情况巡查表
         f_241_fwService.report(date);
+
         //服务器中间件况巡查表
         f_242_middleService.report(date);
         //病毒漏洞检查情况
@@ -52,7 +59,7 @@ public class CommandInitService implements CommandLineRunner {
 
         //ArrayList<String> dateList = CollUtil.newArrayList("2022-07-01", "2022-08-01", "2022-09-01");
         //for (String date : dateList) {
-        //
+        //    f_241_fwService.report(date);
         //}
 
 
