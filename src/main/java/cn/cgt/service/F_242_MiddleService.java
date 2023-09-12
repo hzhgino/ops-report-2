@@ -44,7 +44,8 @@ public class F_242_MiddleService {
         String reportDate = year + "-" + month + "-09";
         templatesParams.put("{编号}", "SJW-MD-" +reportDate);
         templatesParams.put("{日期}", reportDate);
-
+        templatesParams.put("{year}", String.valueOf(year));
+        templatesParams.put("{month}", String.valueOf(month));
         Set<Map.Entry<String, String>> entries = templatesParams.entrySet();
         for (Map.Entry<String, String> entry : entries) {
             //调用方法用新文本替换原文本内容

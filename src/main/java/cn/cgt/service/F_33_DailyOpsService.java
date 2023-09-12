@@ -54,7 +54,8 @@ public class F_33_DailyOpsService {
         templatesParams.put("{startDate}", year + "-" + month + "-01");
         templatesParams.put("{endDate}", year + "-" + month + "-" + endDay);
         //服务操作系统巡检结果
-        dailyExcelReadService.execution(excelReportPath + year + "-" + month + "/");
+        String excelPath = excelReportPath + year + "-" + month + "/";
+        dailyExcelReadService.execution(excelPath);
         Map<String, String> cpuInfoCompute = MachineInfoStore.CPU_INFO_REPORT;
         Set<Map.Entry<String, String>> cpuEntries = cpuInfoCompute.entrySet();
         for (Map.Entry<String, String> entry : cpuEntries) {

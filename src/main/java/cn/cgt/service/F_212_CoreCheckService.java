@@ -43,7 +43,9 @@ public class F_212_CoreCheckService {
         Map<String, String> templatesParams = new HashMap<>();
         String code = year + "-" + month;
         templatesParams.put("{code}", code);
+        templatesParams.put("{year}", String.valueOf(year));
         templatesParams.put("{month}", String.valueOf(month));
+
         Set<Map.Entry<String, String>> entries = templatesParams.entrySet();
         for (Map.Entry<String, String> entry : entries) {
             //调用方法用新文本替换原文本内容

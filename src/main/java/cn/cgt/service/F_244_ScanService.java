@@ -52,7 +52,8 @@ public class F_244_ScanService {
         templatesParams.put("{日期}", reportDate);
         templatesParams.put("{病毒库}", version);
         templatesParams.put("{程序}", scanVersion);
-
+        templatesParams.put("{year}", String.valueOf(year));
+        templatesParams.put("{month}", String.valueOf(month));
         Set<Map.Entry<String, String>> entries = templatesParams.entrySet();
         for (Map.Entry<String, String> entry : entries) {
             //调用方法用新文本替换原文本内容

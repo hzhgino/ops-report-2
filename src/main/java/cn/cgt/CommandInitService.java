@@ -32,8 +32,8 @@ public class CommandInitService implements CommandLineRunner {
     @Override
     public void run(String... args) {
         //报告日期
-        String date = "2023-09-01";
-        String version = " 2023-06-28  "; //病毒库
+        String date = "2023-07-01";
+        String version = "2023-08-28"; //病毒库
         String scanVersion = "8.0.5.5013";  //扫描程序
 
 //        System.out.println("数据更新报告： \\192.168.11.5\开发项目文档\\2023年\\市纪委监委党风廉政建设大数据平台运维（2023年）项目\\项目运维资料\\一、数据整理入库\\过程资料\\数据入库");

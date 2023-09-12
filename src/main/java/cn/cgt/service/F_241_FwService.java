@@ -45,6 +45,9 @@ public class F_241_FwService {
         String reportDate = year + "-" + month + "-09";
         templatesParams.put("{编号}", "SJW-FW-" + reportDate);
         templatesParams.put("{日期}", reportDate);
+        templatesParams.put("{year}", String.valueOf(year));
+        templatesParams.put("{month}", String.valueOf(month));
+
 
         Set<Map.Entry<String, String>> entries = templatesParams.entrySet();
         for (Map.Entry<String, String> entry : entries) {
