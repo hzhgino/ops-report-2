@@ -32,13 +32,14 @@ public class CommandInitService implements CommandLineRunner {
     @Override
     public void run(String... args) {
         //报告日期
-        String date = "2024-04-01";
-        String version = " 2024-04-24  "; //病毒库
+        String date = "2024-07-01";
+        String version = " 2024-08-07 "; //病毒库
         String scanVersion = "8.0.5.5013";  //扫描程序
         // excel 下载地址：172.16.2.12:/home/thtf/ops/excel
 
 //        System.out.println("数据更新报告： \\192.168.11.5\开发项目文档\\2023年\\市纪委监委党风廉政建设大数据平台运维（2023年）项目\\项目运维资料\\一、数据整理入库\\过程资料\\数据入库");
-        System.out.println("数据更新报告: \\\\192.168.11.5\\开发项目文档\\2023年\\市纪委监委党风廉政建设大数据平台运维（2023年）项目\\项目运维资料\\一、数据整理入库\\过程资料\\数据入库");
+//        System.out.println("数据更新报告: \\\\192.168.11.5\\开发项目文档\\2023年\\市纪委监委党风廉政建设大数据平台运维（2023年）项目\\项目运维资料\\一、数据整理入库\\过程资料\\数据入库");
+        System.out.println("数据更新报告: \\\\192.168.11.5\\开发项目文档\\2024年\\市纪委监委党风廉政建设大数据平台运维（2024年）项目\\项目运维资料\\一、数据整理入库\\过程资料\\数据入库");
 
         //日常巡检报告, 每日巡检记录 2.12服务器
         f_33_dailyOpsService.report(date);
